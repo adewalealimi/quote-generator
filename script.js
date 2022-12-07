@@ -11,13 +11,13 @@
 // Get Quotes From API
     let apiQuotes = [];
 
-    //Show Loading
+    //Show Loading Spinner
      function loading() {
         loader.hidden = false;
         quoteContainer.hidden = true;
      }
 
-     // Hide Loading
+     // Hide or Remove Loading Spinner
       function complete() {
         quoteContainer.hidden = false;
         loader.hidden = true;
@@ -34,7 +34,7 @@
         } else {
             authorText.textContent = quote.author;
         }
-        // Check Quote length to determine styling
+        // Check Quote length to determine styling or Dynamically reduce font size for long quotes
         if (quote.text.length > 120 ) {
             quoteText.classList.add('long-quote');
         } else {
